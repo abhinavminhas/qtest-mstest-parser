@@ -1,0 +1,24 @@
+{
+  "name": "qtest-mstest-parser",
+  "version": "1.0.0",
+  "description": "qTest parser for MSTest (.trx) test results file",
+  "main": "parser.js",
+  "scripts": {
+    "test": "node tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinavminhas/qtest-mstest-parser.git"
+  },
+  "author": "Abhinav Minhas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abhinavminhas/qtest-mstest-parser/issues"
+  },
+  "homepage": "https://github.com/abhinavminhas/qtest-mstest-parser#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "globby": "^9.1.0",
+    "xml2js": "^0.4.23"
+  }
+}

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="afd953da-fb95-4d95-a891-f93746747bac" name="abhinavminhas@SERVER1 2021-09-02 13:29:16" runUser="abhinavminhas" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2021-09-02T13:29:16.3252488+10:00" queuing="2021-09-02T13:29:16.3252488+10:00" start="2021-09-02T13:29:16.1216352+10:00" finish="2021-09-02T13:29:16.3432479+10:00" />
+  <TestSettings name="default" id="fa33585d-afe2-4701-9d3b-2ae97537d9df">
+    <Deployment runDeploymentRoot="abhinavminhas_SERVER1_2021-09-02_13_29_16" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="d57ad377-725c-464c-a8e6-1f546c3a9bb8" testId="7255f0e3-a13d-6f6d-28b1-245c3500eaec" testName="Test6" computerName="SERVER1" duration="00:00:00.0050426" startTime="2021-09-02T13:29:16.2142484+10:00" endTime="2021-09-02T13:29:16.2652483+10:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d57ad377-725c-464c-a8e6-1f546c3a9bb8">
+      <Output>
+        <StdOut>TestContext Messages:
+Comparing Numbers.&#xD;
+------------Verification--------------&#xD;
+Comparing IsTrue: &lt;True&gt;. Comparing Numbers.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="99217eea-46d1-4163-8a33-29b4d6c04950" testId="8df7efbc-b244-fc62-5faa-0bb2a3c072e3" testName="Test8" computerName="SERVER1" duration="00:00:00.0002417" startTime="2021-09-02T13:29:16.2902519+10:00" endTime="2021-09-02T13:29:16.2902519+10:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="99217eea-46d1-4163-8a33-29b4d6c04950">
+      <Output>
+        <StdOut>TestContext Messages:
+Null Comparison.&#xD;
+------------Verification--------------&#xD;
+Comparing IsNull: &lt;&gt;. Is Null Comparison.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="840d2b18-1ef2-45ed-b1f4-0e4a633b09e4" testId="fbbebe3e-8422-bd00-09bb-fe6126f5c3b7" testName="Test7" computerName="SERVER1" duration="00:00:00.0007689" startTime="2021-09-02T13:29:16.2892490+10:00" endTime="2021-09-02T13:29:16.2902519+10:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="840d2b18-1ef2-45ed-b1f4-0e4a633b09e4">
+      <Output>
+        <StdOut>TestContext Messages:
+Comparing Numbers.&#xD;
+------------Verification--------------&#xD;
+Comparing value: &lt;1&gt; with value: &lt;1&gt;. Comparing Numbers.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3fd3be63-93f1-48ac-bcda-58ed1168d0c6" testId="e8c0d420-1e6c-ec54-a493-e9d74ab0b76b" testName="Test9" computerName="SERVER1" duration="00:00:00.0002245" startTime="2021-09-02T13:29:16.2902519+10:00" endTime="2021-09-02T13:29:16.2912526+10:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3fd3be63-93f1-48ac-bcda-58ed1168d0c6">
+      <Output>
+        <StdOut>TestContext Messages:
+Not Null Comparison.&#xD;
+------------Verification--------------&#xD;
+Comparing IsNotNull: &lt;1&gt;. Is Not Null Comparison.</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Test8" storage="c:\users\abhinavminhas\testautomation\bin\debug\testautomation.dll" id="8df7efbc-b244-fc62-5faa-0bb2a3c072e3">
+      <TestCategory>
+        <TestCategoryItem TestCategory="Parser - All Passed" />
+      </TestCategory>
+      <Execution id="99217eea-46d1-4163-8a33-29b4d6c04950" />
+      <TestMethod codeBase="C:\Users\abhinavminhas\TestAutomation\bin\Debug\TestAutomation.dll" adapterTypeName="executor://mstestadapter/v2" className="TestAutomation.Tests.Miscellaneous.Tests" name="Test8" />
+    </UnitTest>
+    <UnitTest name="Test6" storage="c:\users\abhinavminhas\testautomation\bin\debug\testautomation.dll" id="7255f0e3-a13d-6f6d-28b1-245c3500eaec">
+      <TestCategory>
+        <TestCategoryItem TestCategory="Parser - All Passed" />
+      </TestCategory>
+      <Execution id="d57ad377-725c-464c-a8e6-1f546c3a9bb8" />
+      <TestMethod codeBase="C:\Users\abhinavminhas\TestAutomation\bin\Debug\TestAutomation.dll" adapterTypeName="executor://mstestadapter/v2" className="TestAutomation.Tests.Miscellaneous.Tests" name="Test6" />
+    </UnitTest>
+    <UnitTest name="Test9" storage="c:\users\abhinavminhas\testautomation\bin\debug\testautomation.dll" id="e8c0d420-1e6c-ec54-a493-e9d74ab0b76b">
+      <TestCategory>
+        <TestCategoryItem TestCategory="Parser - All Passed" />
+      </TestCategory>
+      <Execution id="3fd3be63-93f1-48ac-bcda-58ed1168d0c6" />
+      <TestMethod codeBase="C:\Users\abhinavminhas\TestAutomation\bin\Debug\TestAutomation.dll" adapterTypeName="executor://mstestadapter/v2" className="TestAutomation.Tests.Miscellaneous.Tests" name="Test9" />
+    </UnitTest>
+    <UnitTest name="Test7" storage="c:\users\abhinavminhas\testautomation\bin\debug\testautomation.dll" id="fbbebe3e-8422-bd00-09bb-fe6126f5c3b7">
+      <TestCategory>
+        <TestCategoryItem TestCategory="Parser - All Passed" />
+      </TestCategory>
+      <Execution id="840d2b18-1ef2-45ed-b1f4-0e4a633b09e4" />
+      <TestMethod codeBase="C:\Users\abhinavminhas\TestAutomation\bin\Debug\TestAutomation.dll" adapterTypeName="executor://mstestadapter/v2" className="TestAutomation.Tests.Miscellaneous.Tests" name="Test7" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="7255f0e3-a13d-6f6d-28b1-245c3500eaec" executionId="d57ad377-725c-464c-a8e6-1f546c3a9bb8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8df7efbc-b244-fc62-5faa-0bb2a3c072e3" executionId="99217eea-46d1-4163-8a33-29b4d6c04950" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fbbebe3e-8422-bd00-09bb-fe6126f5c3b7" executionId="840d2b18-1ef2-45ed-b1f4-0e4a633b09e4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e8c0d420-1e6c-ec54-a493-e9d74ab0b76b" executionId="3fd3be63-93f1-48ac-bcda-58ed1168d0c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="4" executed="4" passed="4" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>
