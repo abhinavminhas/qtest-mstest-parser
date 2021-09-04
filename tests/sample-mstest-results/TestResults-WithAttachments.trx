@@ -14,7 +14,7 @@ Comparing value: &lt;1&gt; with value: &lt;2&gt;. Comparing Numbers.</StdOut>
         <ErrorInfo>
           <Message>Assert.AreEqual failed. Expected:&lt;1&gt;. Actual:&lt;2&gt;.  Comparing Numbers.</Message>
           <StackTrace>   at TestAutomation.Helper.AssertExtension.AreEqual(Object expected, Object actual, TestContext testcontext, String message) in C:\Users\abhinavminhas\TestAutomation\Helper\AssertExtension.cs:line 27&#xD;
-   at TestAutomation.Tests.Miscellaneous.Tests.Test17() in C:\Users\abhinavminhas\TestAutomation\Tests\Miscellaneous\SOQLTests.cs:line 190&#xD;
+   at TestAutomation.Tests.Miscellaneous.Tests.Test17() in C:\Users\abhinavminhas\TestAutomation\Tests\Miscellaneous\Tests.cs:line 190&#xD;
 </StackTrace>
         </ErrorInfo>
       </Output>
@@ -31,7 +31,7 @@ Comparing value: &lt;1&gt; with value: &lt;2&gt;. Comparing Numbers.</StdOut>
         <ErrorInfo>
           <Message>Assert.AreEqual failed. Expected:&lt;1&gt;. Actual:&lt;2&gt;.  Comparing Numbers.</Message>
           <StackTrace>   at TestAutomation.Helper.AssertExtension.AreEqual(Object expected, Object actual, TestContext testcontext, String message) in C:\Users\abhinavminhas\TestAutomation\Helper\AssertExtension.cs:line 27&#xD;
-   at TestAutomation.Tests.Miscellaneous.Tests.Test15() in C:\Users\abhinavminhas\TestAutomation\Tests\Miscellaneous\SOQLTests.cs:line 171&#xD;
+   at TestAutomation.Tests.Miscellaneous.Tests.Test15() in C:\Users\abhinavminhas\TestAutomation\Tests\Miscellaneous\Tests.cs:line 171&#xD;
 </StackTrace>
         </ErrorInfo>
       </Output>
