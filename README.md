@@ -2,7 +2,7 @@
 *qTest parser for MSTest (.trx) test result files*. </br></br>
 ![qtest-mstest-parser](https://github.com/abhinavminhas/qtest-mstest-parser/actions/workflows/main.yml/badge.svg)
 
-[Tricentis qTest](https://www.tricentis.com/products/unified-test-management-qtest/) is a Test Management tool. It's centralizing automated test execution and management, [qTest Launch](https://www.tricentis.com/resources/qtest-launch-test-automation-management/) enables enterprises to scale test automation.
+Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qtest/) is a Test Management tool. It's centralizing automated test execution and management, [qTest Launch](https://www.tricentis.com/resources/qtest-launch-test-automation-management/) enables enterprises to scale test automation.
 
 **Problem Statement**: So far no in-built parser is available for MSTest (.trx) test result files in qTest, but qTest offers the option to create and use [custom parsers](https://documentation.tricentis.com/qtest/od/en/content/launch/automation_host/universal_agent/parsers/develop_custom_test_result_parser_for_universal_agent.htm) which is what has been attempted here for MSTest (.trx) test result file types. </br>
 
@@ -26,6 +26,20 @@
    ````
    [Example]
    <img src="images\log-output.png" > </img>
+3. Parser mapping configuration as per qTest automation mapping under 'Automation Settings'
+
+   <img src="images\qTest-automation-mappings.png" > </img>
+
+   | MSTest test outcome statuses | Mapped qTest automation status |
+   | :---: | :---: |
+   | Failed | FAIL |
+   | Inconclusive | SKIP |
+   | Passed | PASS |
+   | Error | FAIL |
+   | Timeout | FAIL |
+   | Aborted | FAIL |
+   | Unknown | SKIP |
+   | NotExecuted | SKIP |
 
 ## Steps To Configure:
 
