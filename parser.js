@@ -173,5 +173,6 @@ function parse (pathToTestResult, options) {
 
  module.exports = {
     parse : parse,
-    getTestCaseStatus : getTestCaseStatus
+    getTestCaseStatus : getTestCaseStatus,
+    htmlEntities : htmlEntities
  }
