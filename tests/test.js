@@ -114,7 +114,7 @@ const parser = require('../parser.js');
     assert(!resultString.includes('"order": 18'));
 })();
 
-(() => {
+(async () => {
     console.log('TEST 9 - Get test case outcome status mappings (MSTest -> qTest) test.');
     //Different test outcome statuses comparison.
     let result = parser.getTestCaseStatus('Failed');
@@ -135,4 +135,16 @@ const parser = require('../parser.js');
     assert.equal(result, 'SKIP');
     result = parser.getTestCaseStatus('SomethingElse');
     assert.equal(result, 'FAIL');
+})();
+
+(async () => {
+    console.log('TEST 10 - HTML entities test.');
+    let result = parser.htmlEntities('&');
+    assert.equal(result, '&amp;');
+    result = parser.htmlEntities('<');
+    assert.equal(result, '&lt;');
+    result = parser.htmlEntities('>');
+    assert.equal(result, '&gt;');
+    result = parser.htmlEntities('"');
+    assert.equal(result, '&quot;');
 })();
