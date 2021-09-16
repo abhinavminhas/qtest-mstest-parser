@@ -139,6 +139,7 @@ const parser = require('../parser.js');
 
 (async () => {
     console.log('TEST 10 - HTML entities test.');
+    //HTML entities conversion check
     let result = parser.htmlEntities('&');
     assert.equal(result, '&amp;');
     result = parser.htmlEntities('<');
@@ -147,4 +148,20 @@ const parser = require('../parser.js');
     assert.equal(result, '&gt;');
     result = parser.htmlEntities('"');
     assert.equal(result, '&quot;');
+})();
+
+(async () => {
+    console.log('TEST 12 - Delay test.');
+    let waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
+    let timeNow = Date.now();
+    parser.delay(waitTime);
+    assert.equal((timeNow + waitTime), Date.now());
+})();
+
+(async () => {
+    console.log('TEST 13 - Max delay test.');
+    let waitTime = 20001;
+    let timeNow = Date.now();
+    parser.delay(waitTime);
+    assert.equal((timeNow + 20000), Date.now());
 })();
