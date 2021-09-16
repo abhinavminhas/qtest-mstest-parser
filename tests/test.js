@@ -163,5 +163,5 @@ const parser = require('../parser.js');
     let waitTime = 20001;
     let timeNow = Date.now();
     parser.delay(waitTime);
-    assert.equal((timeNow + 20000), Date.now());
+    assert.ok(Date.now() + 5 >= (timeNow + 20000));
 })();
