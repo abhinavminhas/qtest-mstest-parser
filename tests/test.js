@@ -158,7 +158,7 @@ const parser = require('../parser.js');
     assert.equal((timeNow + waitTime), Date.now());
 })();
 
-(async () => {
+(() => {
     console.log('TEST 13 - Max delay test.');
     let waitTime = 20001;
     let timeNow = Date.now();
