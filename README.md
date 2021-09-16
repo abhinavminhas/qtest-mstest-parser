@@ -1,6 +1,7 @@
 # **qTest-MSTest-parser**
 *qTest parser for MSTest (.trx) test result files*. </br></br>
 ![qtest-mstest-parser](https://github.com/abhinavminhas/qtest-mstest-parser/actions/workflows/main.yml/badge.svg)
+![maintainer](https://img.shields.io/badge/Creator/Maintainer-abhinavminhas-e65c00)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qtest/) is a Test Management tool. It's centralizing automated test execution and management, [qTest Launch](https://www.tricentis.com/resources/qtest-launch-test-automation-management/) enables enterprises to scale test automation.
@@ -86,6 +87,14 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
    - **Result Parser**: <*MSTest (custom) parser added above*> </br>
    
    <img src="images\add-parser-to-agent.png"> </img>
+
+   **NOTE:** *Ensure the final command in '_**Executor**_' block does not generate failed output (e.g test run with failed tests), may avoid the parser from executing. To avoid try adding log output command in the end. (e.g batch -> echo Completed)*
+      ##### [ Example ] #####
+      ```
+      echo :::: EXECUTION STARTED ::::
+      <Path to>\VsTest.console.exe <Path to>\Test.dll /TestCaseFilter:Name=Test1 /Logger:trx;LogFileName=TestResultFile.trx
+      echo :::: EXECUTION COMPLETED ::::
+      ```
 
 ## Parsed Test Results:
 
