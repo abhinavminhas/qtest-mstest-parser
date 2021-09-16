@@ -13,7 +13,7 @@
   * @param {string} testCaseStatus Test case status from MSTest (.trx) results file.
   * @returns qTest compatible test case outcome status.
   */
-function getTestCaseStatus(testCaseStatus) {
+ function getTestCaseStatus(testCaseStatus) {
      if (testCaseStatus == 'Failed') {
          return "FAIL";
      } else if (testCaseStatus == 'Inconclusive') {
@@ -44,13 +44,29 @@ function getTestCaseStatus(testCaseStatus) {
  }
  
  /**
+  * Adds delay to the parser execution.
+  * @param {string} ms Time in milliseconds (max 20 secs).
+  */
+ function delay(ms) {
+     if (ms > 20000) {
+         ms = 20000
+     }
+     ms += new Date().getTime();
+     while (new Date() < ms) {}
+ }
+ 
+ /**
   * Parse multiple MSTest (.trx) test result files.
   * @param {string} pathToTestResult Path to result file directory or test result (.trx) file.
   * @param {object} options Parser options. None Implemented.
   * @returns Test results.
   */
-function parse (pathToTestResult, options) {
+ function parse(pathToTestResult, options) {
      return new Promise((resolve, reject) => {
+ 
+         if (options != null && options['delay'] != undefined) {
+             delay(options['delay']);
+         }
  
          //Parser (Start)
          console.log(` == Parser name: ${packageJson.name}, version ${packageJson.version} ==`);
@@ -170,9 +186,10 @@ function parse (pathToTestResult, options) {
  
      });
  }
-
+ 
  module.exports = {
-    parse : parse,
-    getTestCaseStatus : getTestCaseStatus,
-    htmlEntities : htmlEntities
+     parse: parse,
+     getTestCaseStatus: getTestCaseStatus,
+     htmlEntities: htmlEntities,
+     delay: delay
  }
