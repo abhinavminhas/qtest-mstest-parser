@@ -1,4 +1,4 @@
-# **qTest-MSTest-parser**
+# **qTest-MSTest-Parser**
 *qTest parser for MSTest (.trx) test result files*. </br></br>
 ![qtest-mstest-parser](https://github.com/abhinavminhas/qtest-mstest-parser/actions/workflows/main.yml/badge.svg)
 ![maintainer](https://img.shields.io/badge/Creator/Maintainer-abhinavminhas-e65c00)
@@ -24,7 +24,6 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
    
    == RESULT FILE ATTACHMENTS == 
    <This section lists out all test result attachment files>
-
    ````
    [Example]
    <img src="images\log-output.png" > </img>
@@ -45,7 +44,7 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
 
 ## Steps To Configure:
 
-1. Download zipped parser from latest "*qtest-mstest-parser*" [workflow](https://github.com/abhinavminhas/qtest-mstest-parser/actions/workflows/main.yml) artifacts.
+1. Download zipped parser from latest "*qTest-MSTest-Parser*" [workflow](https://github.com/abhinavminhas/qtest-mstest-parser/actions/workflows/main.yml) artifacts.
 
    <img src="images\artifacts.png" > </img>
    - Required zipped file contents (for manually creating zipped file)
@@ -88,7 +87,7 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
    
    <img src="images\add-parser-to-agent.png"> </img>
 
-   **NOTE:** *Ensure the final command in '_**Executor**_' block does not generate failed output (e.g test run with failed tests), may avoid the parser from executing. To avoid try adding log output command in the end. (e.g batch -> echo Completed)*
+   **NOTE:** *Ensure the final command in '_**Executor**_' block does not generate failed output (e.g. test run with failed tests), may avoid the parser from executing. To avoid try adding log output command in the end. (e.g. batch -> echo Completed)*
       ##### [ Example ] #####
       ```
       echo :::: EXECUTION STARTED ::::
