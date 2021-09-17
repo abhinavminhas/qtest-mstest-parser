@@ -1,5 +1,5 @@
 # (CI/SCHEDULE/MANUAL TRIGGER)
-name: qTest-MSTest-parser
+name: qTest-MSTest-Parser
 
 on:
   push:
