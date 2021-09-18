@@ -151,17 +151,50 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 12 - Delay test.');
-    let waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
+    console.log('TEST 11 - Delay test.');
+    var waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
     let timeNow = Date.now();
     parser.delay(waitTime);
-    assert.equal((timeNow + waitTime), Date.now());
+    let timeAfter = Date.now();
+    new assert.equal(timeAfter, (timeNow + waitTime));
 })();
 
-(() => {
-    console.log('TEST 13 - Max delay test.');
+(async () => {
+    console.log('TEST 12 - Max delay test.');
     let waitTime = 20001;
     let timeNow = Date.now();
     parser.delay(waitTime);
-    assert.ok(Date.now() + 5 >= (timeNow + 20000));
+    let timeAfter = Date.now();
+    let difference = Math.abs(timeAfter - (timeNow + 20000));
+    assert.ok(difference <= 5);
+})();
+
+(async () => {
+    console.log('TEST 13 - Parse MSTest (TestResults-DifferentTestOutcomes.trx) results file with different test outcomes (using path with filename) & delay option.');
+    var waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
+    let result = await parser.parse('./tests/sample-mstest-results/TestResults-DifferentTestOutcomes.trx', { delay: waitTime });
+    var resultString = JSON.stringify(result, null, 4);
+    //console.log(resultString);
+    //All records exist comparison.
+    assert(resultString.includes('"order": 1'));
+    assert(resultString.includes('"order": 2'));
+    assert(resultString.includes('"order": 3'));
+    assert(resultString.includes('"order": 4'));
+    assert(resultString.includes('"order": 5'));
+    //Not other records exist comparison.
+    assert(!resultString.includes('"order": 6'));
+})();
+
+(async () => {
+    console.log('TEST 14 - Parse all MSTest (.trx) result files (using path to result files - path ending /) & delay option.');
+    let waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
+    let result = await parser.parse('./tests/sample-mstest-results/', { delay: waitTime });
+    var resultString = JSON.stringify(result, null, 4);
+    //console.log(resultString);
+    //Record start comparison.
+    assert(resultString.includes('"order": 1'));
+    //Record end comparison.
+    assert(resultString.includes('"order": 17'));
+    //Not other records exist comparison.
+    assert(!resultString.includes('"order": 18'));
 })();
