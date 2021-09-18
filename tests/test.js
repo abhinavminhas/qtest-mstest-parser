@@ -166,7 +166,7 @@ const parser = require('../parser.js');
     parser.delay(waitTime);
     let timeAfter = Date.now();
     let difference = Math.abs(timeAfter - (timeNow + 20000));
-    assert.ok(difference <= 5);
+    assert.ok(difference <= 10);
 })();
 
 (async () => {
