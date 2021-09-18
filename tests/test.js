@@ -153,20 +153,19 @@ const parser = require('../parser.js');
 (async () => {
     console.log('TEST 11 - Delay test.');
     var waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
-    let timeNow = Date.now();
+    let timeNow = new Date().getTime();
     parser.delay(waitTime);
-    let timeAfter = Date.now();
+    let timeAfter = new Date().getTime();
     new assert.equal(timeAfter, (timeNow + waitTime));
 })();
 
 (async () => {
     console.log('TEST 12 - Max delay test.');
     let waitTime = 20001;
-    let timeNow = Date.now();
+    let timeNow = new Date().getTime();
     parser.delay(waitTime);
-    let timeAfter = Date.now();
-    let difference = Math.abs(timeAfter - (timeNow + 20000));
-    assert.ok(difference <= 10);
+    let timeAfter = new Date().getTime();
+    new assert.equal(timeAfter, (timeNow + 20000));
 })();
 
 (async () => {
