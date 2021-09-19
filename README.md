@@ -55,6 +55,8 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
         parser.js
         ```
 
+      **NOTE:** *generated 'node_modules' package folder also needs to be part of the zipped file.*
+
 2. Login to qTest and open 'Launch' from menu < <img src="images\qTest-icon.png" width ="28px"> </img> >.
 
    <img src="images\qTest1.png"> </img>
