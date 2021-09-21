@@ -17,17 +17,17 @@ jobs:
         node-version: [ 14.x ]
 
     steps:
-    - name: Checkout repository
+    - name: Checkout Repository
       uses: actions/checkout@v2
       with:
         fetch-depth: 2 
 
-    - name: Set up Node.js ${{ matrix.node-version }}
+    - name: Set Up Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
+    - name: Install Dependencies
       run: |
         npm install
         npm install -g nyc
