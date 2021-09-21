@@ -197,3 +197,19 @@ const parser = require('../parser.js');
     //Not other records exist comparison.
     assert(!resultString.includes('"order": 18'));
 })();
+
+(async () => {
+    console.log('TEST 15 - Test result files not found.');
+    try{
+        await parser.parse('./tests/invalid-mstest-result-files/path-with-no-mstest-results/', null);
+    } catch(e) {
+        let errorMessage = e.message;
+        assert.equal(errorMessage, "Could not find any result log-file(s) in: './tests/invalid-mstest-result-files/path-with-no-mstest-results/'");
+    }
+})();
+
+(async () => {
+    console.log('TEST 16 - Invalid test results file.');
+    let results = await parser.parse('./tests/invalid-mstest-result-files/TestResults-Invalid.trx', null);
+    assert.equal(results.length, 0);
+})();
