@@ -45,9 +45,13 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
 
 ## Steps To Configure:
 
-1. Download zipped parser from latest "*qTest-MSTest-Parser*" [workflow](https://github.com/abhinavminhas/qtest-mstest-parser/actions/workflows/main.yml) artifacts.
+1. Download zipped parser from latest release under [Releases](https://github.com/abhinavminhas/qtest-mstest-parser/releases).  
+   Artifact Name: "**qtest-mstest-parser.zip**".  
+
+   It can also be downloaded form latest successful "*qTest-MSTest-Parser*" [workflow](https://github.com/abhinavminhas/qtest-mstest-parser/actions/workflows/main.yml) artifacts.
 
    <img src="images\artifacts.png" > </img>
+
    - Required zipped file contents (for manually creating zipped file)
         ```
         node_modules/
