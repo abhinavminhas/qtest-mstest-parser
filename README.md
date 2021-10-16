@@ -1,6 +1,6 @@
 # **qTest-MSTest-Parser**
 *qTest parser for MSTest (.trx) test result files*. </br></br>
-![qtest-mstest-parser](https://github.com/abhinavminhas/qtest-mstest-parser/actions/workflows/main.yml/badge.svg)
+![qtest-mstest-parser](https://github.com/abhinavminhas/qtest-mstest-parser/actions/workflows/build.yml/badge.svg)
 [![codecov](https://codecov.io/gh/abhinavminhas/qtest-mstest-parser/branch/main/graph/badge.svg?token=JZRDLOU856)](https://codecov.io/gh/abhinavminhas/qtest-mstest-parser)
 ![maintainer](https://img.shields.io/badge/Creator/Maintainer-abhinavminhas-e65c00)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
