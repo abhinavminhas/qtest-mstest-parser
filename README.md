@@ -62,7 +62,7 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
 
       **NOTE:** *Generated 'node_modules' package folder also needs to be part of the zipped file.*
 
-2. Login to qTest and open 'Launch' from menu < <img src="https://user-images.githubusercontent.com/17473202/137571310-d26392b2-6e7f-4cc4-9d9a-d9b6550746f6.png" width ="28px"> </img> >.
+2. Login to qTest and open 'Launch' from menu < <img src="https://user-images.githubusercontent.com/17473202/137571224-165dc5a7-f75f-427e-9432-660679b72578.png" width ="28px"> </img> >.
 
    <img src="https://user-images.githubusercontent.com/17473202/137571310-d26392b2-6e7f-4cc4-9d9a-d9b6550746f6.png"> </img>
 
