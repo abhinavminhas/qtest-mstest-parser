@@ -1,9 +1,11 @@
 name: Release
 
 env:
-    RELEASE_NAME: "v.1.0.0"
+    RELEASE_NAME: "v.1.0.1"
     RELEASE_NOTES: |
       - Sofware Release (qTest-MSTest-Parser)
+      - No change to qTest-MSTest-Parser
+      - Removed images folder from solution
     
 on:
   workflow_dispatch:
