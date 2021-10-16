@@ -27,10 +27,10 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
    <This section lists out all test result attachment files>
    ````
    [Example]
-   <img src="images\log-output.png" > </img>
+   <img src="https://user-images.githubusercontent.com/17473202/137570712-1c16433a-f2be-45c9-a857-dd9764a9a915.png" > </img>
 3. Parser mapping configuration as per qTest automation mapping under 'Automation Settings'
 
-   <img src="images\qTest-automation-mappings.png" > </img>
+   <img src="https://user-images.githubusercontent.com/17473202/137570732-af07827f-2519-47bb-bbe3-fe5abf30db0c.png" > </img>
 
    | MSTest test outcome statuses | Mapped qTest automation status |
    | :---: | :---: |
@@ -50,7 +50,7 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
 
    It can also be downloaded form latest successful "*qTest-MSTest-Parser*" [workflow](https://github.com/abhinavminhas/qtest-mstest-parser/actions/workflows/main.yml) artifacts.
 
-   <img src="images\artifacts.png" > </img>
+   <img src="https://user-images.githubusercontent.com/17473202/137570746-b66adc87-a5ce-4a6c-a2d9-427066c23689.png" > </img>
 
    - Required zipped file contents (for manually creating zipped file)
         ```
@@ -62,24 +62,24 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
 
       **NOTE:** *Generated 'node_modules' package folder also needs to be part of the zipped file.*
 
-2. Login to qTest and open 'Launch' from menu < <img src="images\qTest-icon.png" width ="28px"> </img> >.
+2. Login to qTest and open 'Launch' from menu < <img src="https://user-images.githubusercontent.com/17473202/137571224-165dc5a7-f75f-427e-9432-660679b72578.png" width ="28px"> </img> >.
 
-   <img src="images\qTest1.png"> </img>
+   <img src="https://user-images.githubusercontent.com/17473202/137571310-d26392b2-6e7f-4cc4-9d9a-d9b6550746f6.png"> </img>
 
-3. Open settings < <img src="images\settings.png"> </img> > and click '**ADD**'.
+3. Open settings < <img src="https://user-images.githubusercontent.com/17473202/137571346-bf8ded0f-e1d0-40d2-b4bb-eda65c053388.png"> </img> > and click '**ADD**'.
 
-   <img src="images\qTest2.png"> </img>
+   <img src="https://user-images.githubusercontent.com/17473202/137571400-6164641f-a2e5-4b16-9fdd-258eabe1e98a.png"> </img>
 
 4. Add below parser details and '**SAVE**'.
     - **Name**: <*name of parser*>
     - **Version**: <*version of parser*>
     - **Zip package**: <*path to the downloaded parser .zip file*> </br>
 
-   <img src="images\qTest3.png"> </img>
+   <img src="https://user-images.githubusercontent.com/17473202/137571410-84d5d2e3-7441-4f5b-844b-312d4fe67f9b.png"> </img>
 
 5. Once the parser is saved the custom parser should be created in the list.
 
-   <img src="images\qTest4.png"> </img>
+   <img src="https://user-images.githubusercontent.com/17473202/137571422-5622c78e-19b6-4044-bd44-a419d3d2e4b5.png"> </img>
 
 ## Configure Automation Host Agent To Use The Parser:
 
@@ -92,7 +92,7 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
    - **Path to Results**: <*path to the test result (.trx) files*>
    - **Result Parser**: <*MSTest (custom) parser added above*> </br>
    
-   <img src="images\add-parser-to-agent.png"> </img>
+   <img src="https://user-images.githubusercontent.com/17473202/137571430-0786f5f5-2a5c-4794-b261-89a0134c797c.png"> </img>
 
    **NOTE:** *Ensure the final command in '_**Executor**_' block does not generate failed output (e.g. test run with failed tests), may avoid the parser from executing. To avoid try adding log output command in the end. (e.g. batch -> echo Completed)*
       ##### [ Example ] #####
@@ -106,12 +106,12 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
 
 1. Results parsed for test run.
    
-   <img src="images\results.png"> </img>
+   <img src="https://user-images.githubusercontent.com/17473202/137571439-421c7867-2ad3-4902-83b7-30a3a4ebbed6.png"> </img>
 
 2. Multiple test runs created for a particular test case run executed multiple times in a day.
    
-   <img src="images\execution-runs.png"> </img>
+   <img src="https://user-images.githubusercontent.com/17473202/137571445-4682af87-b8f9-4027-b678-ac95880bb541.png"> </img>
 
 3. Log attachments created for each test run.
    
-   <img src="images\execution-run-attachments.png"> </img>
+   <img src="https://user-images.githubusercontent.com/17473202/137571457-9ad19b2e-1a8b-4579-aa46-1339bbf87ff6.png"> </img>
