@@ -48,7 +48,7 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
 1. Download zipped parser from latest release under [Releases](https://github.com/abhinavminhas/qtest-mstest-parser/releases).  
    Artifact Name: "**qtest-mstest-parser.zip**".  
 
-   It can also be downloaded form latest successful "*qTest-MSTest-Parser*" [workflow](https://github.com/abhinavminhas/qtest-mstest-parser/actions/workflows/main.yml) artifacts.
+   It can also be downloaded form latest successful "*qTest-MSTest-Parser*" [workflow](https://github.com/abhinavminhas/qtest-mstest-parser/actions/workflows/build.yml) artifacts.
 
    <img src="https://user-images.githubusercontent.com/17473202/137570746-b66adc87-a5ce-4a6c-a2d9-427066c23689.png" > </img>
 
