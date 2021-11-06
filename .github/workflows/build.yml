@@ -4,8 +4,12 @@ name: qTest-MSTest-Parser
 on:
   push:
     branches: [ main, dev ]
+    paths-ignore:
+      - '**.md'
   pull_request:
     branches: [ main ]
+    paths-ignore:
+      - '**.md'
   schedule:
     - cron:  '0 0 1 */3 *'
   workflow_dispatch:
