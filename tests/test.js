@@ -156,7 +156,7 @@ const parser = require('../parser.js');
     let timeNow = new Date().getTime();
     parser.delay(waitTime);
     let timeAfter = new Date().getTime();
-    new assert.equal(timeAfter, (timeNow + waitTime));
+    assert.ok(timeAfter >= (timeNow + waitTime));
 })();
 
 (async () => {
@@ -165,7 +165,7 @@ const parser = require('../parser.js');
     let timeNow = new Date().getTime();
     parser.delay(waitTime);
     let timeAfter = new Date().getTime();
-    new assert.equal(timeAfter, (timeNow + 20000));
+    assert.ok(timeAfter >= (timeNow + 20000));
 })();
 
 (async () => {
