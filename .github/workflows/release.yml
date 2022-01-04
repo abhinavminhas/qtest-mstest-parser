@@ -1,11 +1,11 @@
 name: Release
 
 env:
-    RELEASE_NAME: "v.1.0.2"
+    RELEASE_NAME: "v.1.0.3"
     RELEASE_NOTES: |
       - Sofware Release (qTest-MSTest-Parser)
       - No change to qTest-MSTest-Parser
-      - Node version update from 14.x LTS to 16.x LTS
+      - Security Update - 'glob-parent' dependency update to latest version (6.0.2) to avoid [CVE-2020-28469](https://github.com/advisories/GHSA-ww39-953v-wcq6)
     
 on:
   workflow_dispatch:
