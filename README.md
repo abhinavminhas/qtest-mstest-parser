@@ -4,6 +4,7 @@
 [![codecov](https://codecov.io/gh/abhinavminhas/qtest-mstest-parser/branch/main/graph/badge.svg?token=JZRDLOU856)](https://codecov.io/gh/abhinavminhas/qtest-mstest-parser)
 ![maintainer](https://img.shields.io/badge/Creator/Maintainer-abhinavminhas-e65c00)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Release](https://img.shields.io/github/v/release/abhinavminhas/qtest-mstest-parser?label=Github%20Release)](https://github.com/abhinavminhas/qtest-mstest-parser/releases)
 
 Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qtest/) is a Test Management tool. It's centralizing automated test execution and management, [qTest Launch](https://www.tricentis.com/resources/qtest-launch-test-automation-management/) enables enterprises to scale test automation.
 
