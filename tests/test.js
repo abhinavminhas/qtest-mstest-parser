@@ -4,7 +4,7 @@ const parser = require('../parser.js');
 (async () => {
     console.log('TEST 1 - Parse MSTest (TestResults-DifferentTestOutcomes.trx) results file with different test outcomes (using path with filename).');
     let result = await parser.parse('./tests/sample-mstest-results/TestResults-DifferentTestOutcomes.trx', null);
-    var resultString = JSON.stringify(result, null, 4);
+    let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
     //All records exist comparison.
     assert(resultString.includes('"order": 1'));
@@ -19,7 +19,7 @@ const parser = require('../parser.js');
 (async () => {
     console.log('TEST 2 - Parse MSTest (TestResults-AllPassedOutcomes.trx) results file with all passed test outcomes (using path with filename).');
     let result = await parser.parse('./tests/sample-mstest-results/TestResults-AllPassedOutcomes.trx', null);
-    var resultString = JSON.stringify(result, null, 4);
+    let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
     //All records exist comparison.
     assert(resultString.includes('"order": 1'));
@@ -35,7 +35,7 @@ const parser = require('../parser.js');
 (async () => {
     console.log('TEST 3 - Parse MSTest (TestResults-AllFailedOutcomes.trx) results file with all failed test outcomes (using path with filename).');
     let result = await parser.parse('./tests/sample-mstest-results/TestResults-AllFailedOutcomes.trx', null);
-    var resultString = JSON.stringify(result, null, 4);
+    let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
     //All records exist comparison.
     assert(resultString.includes('"order": 1'));
@@ -51,7 +51,7 @@ const parser = require('../parser.js');
 (async () => {
     console.log('TEST 4 - Parse MSTest (TestResults-WithAttachments.trx) results file with attachment details (using path with filename).');
     let result = await parser.parse('./tests/sample-mstest-results/TestResults-WithAttachments.trx', null);
-    var resultString = JSON.stringify(result, null, 4);
+    let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
     //All records exist comparison.
     assert(resultString.includes('"order": 1'));
@@ -65,7 +65,7 @@ const parser = require('../parser.js');
 (async () => {
     console.log('TEST 5 - Parse all MSTest (.trx) result files (using path to result files - path ending /).');
     let result = await parser.parse('./tests/sample-mstest-results/', null);
-    var resultString = JSON.stringify(result, null, 4);
+    let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
     //Record start comparison.
     assert(resultString.includes('"order": 1'));
@@ -78,7 +78,7 @@ const parser = require('../parser.js');
 (async () => {
     console.log('TEST 6 - Parse all MSTest (.trx) result files (using path to result files - path not ending /).');
     let result = await parser.parse('./tests/sample-mstest-results', null);
-    var resultString = JSON.stringify(result, null, 4);
+    let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
     //Record start comparison.
     assert(resultString.includes('"order": 1'));
@@ -91,7 +91,7 @@ const parser = require('../parser.js');
 (async () => {
     console.log('TEST 7 - Parse all MSTest (.trx) result files (using matching pattern - *.trx /).');
     let result = await parser.parse('./tests/sample-mstest-results/*.trx', null);
-    var resultString = JSON.stringify(result, null, 4);
+    let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
     //Record start comparison.
     assert(resultString.includes('"order": 1'));
@@ -104,7 +104,7 @@ const parser = require('../parser.js');
 (async () => {
     console.log('TEST 8 - Parse all MSTest (.trx) result files (using matching pattern - **/*.trx /).');
     let result = await parser.parse('./tests/sample-mstest-results/**/*.trx', null);
-    var resultString = JSON.stringify(result, null, 4);
+    let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
     //Record start comparison.
     assert(resultString.includes('"order": 1'));
@@ -152,7 +152,7 @@ const parser = require('../parser.js');
 
 (async () => {
     console.log('TEST 11 - Delay test.');
-    var waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
+    let waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
     let timeNow = new Date().getTime();
     parser.delay(waitTime);
     let timeAfter = new Date().getTime();
@@ -170,9 +170,9 @@ const parser = require('../parser.js');
 
 (async () => {
     console.log('TEST 13 - Parse MSTest (TestResults-DifferentTestOutcomes.trx) results file with different test outcomes (using path with filename) & delay option.');
-    var waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
+    let waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
     let result = await parser.parse('./tests/sample-mstest-results/TestResults-DifferentTestOutcomes.trx', { delay: waitTime });
-    var resultString = JSON.stringify(result, null, 4);
+    let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
     //All records exist comparison.
     assert(resultString.includes('"order": 1'));
@@ -188,7 +188,7 @@ const parser = require('../parser.js');
     console.log('TEST 14 - Parse all MSTest (.trx) result files (using path to result files - path ending /) & delay option.');
     let waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
     let result = await parser.parse('./tests/sample-mstest-results/', { delay: waitTime });
-    var resultString = JSON.stringify(result, null, 4);
+    let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
     //Record start comparison.
     assert(resultString.includes('"order": 1'));
