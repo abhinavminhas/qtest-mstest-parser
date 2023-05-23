@@ -1,11 +1,11 @@
 name: Release
 
 env:
-    RELEASE_NAME: "v.1.0.3"
+    RELEASE_NAME: "v.1.0.4"
     RELEASE_NOTES: |
-      - Sofware Release (qTest-MSTest-Parser)
-      - No change to qTest-MSTest-Parser
-      - Security Update - 'glob-parent' dependency update to latest version (6.0.2) to avoid [CVE-2020-28469](https://github.com/advisories/GHSA-ww39-953v-wcq6)
+      - Security Update - 'decode-uri-component' vulnerable to Denial of Service (DoS) [CVE-2022-38900](https://github.com/advisories/GHSA-w573-4hg7-7wgq)
+      - Security Update - 'minimatch' ReDoS vulnerability [CVE-2022-3517](https://github.com/advisories/GHSA-f8q6-p94x-37v3)
+      - Security Update - 'xml2js' is vulnerable to prototype pollution [CVE-2023-0842](https://github.com/advisories/GHSA-776f-qx25-q3cc)
     
 on:
   workflow_dispatch:
