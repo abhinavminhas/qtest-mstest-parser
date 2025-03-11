@@ -19,7 +19,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ ubuntu-20.04, windows-2022, macos-11 ]
+        os: [ ubuntu-22.04, windows-2022, macos-14 ]
         node-version: [ 14.x, 16.x, 17.x, 18.x ]
 
     steps:
@@ -32,7 +32,7 @@ jobs:
     - run: npm test
     
     - name: Upload Artifact
-      if: ${{ matrix.os == 'ubuntu-20.04' && matrix.node-version == '16.x' }}
+      if: ${{ matrix.os == 'ubuntu-22.04' && matrix.node-version == '16.x' }}
       uses: actions/upload-artifact@v4
       with:
         name: qtest-mstest-parser
