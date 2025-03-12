@@ -18,7 +18,7 @@
   "homepage": "https://github.com/abhinavminhas/qtest-mstest-parser#readme",
   "dependencies": {
     "fs": "^0.0.1-security",
-    "globby": "^9.1.0",
+    "globby": "^10.0.0",
     "xml2js": "^0.5.0"
   }
 }
