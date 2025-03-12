@@ -54,7 +54,7 @@ Tricentis [qTest](https://www.tricentis.com/products/unified-test-management-qte
    <img src="https://user-images.githubusercontent.com/17473202/137570746-b66adc87-a5ce-4a6c-a2d9-427066c23689.png" > </img>
 
    - Required zipped file contents (for manually creating zipped file)
-        ```
+        ``` js
         node_modules/
         package.json
         package-lock.json

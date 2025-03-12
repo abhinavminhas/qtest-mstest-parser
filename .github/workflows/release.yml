@@ -1,11 +1,10 @@
 name: Release
 
 env:
-    RELEASE_NAME: "v.1.0.4"
+    RELEASE_NAME: "v.1.0.5"
     RELEASE_NOTES: |
-      - Security Update - 'decode-uri-component' vulnerable to Denial of Service (DoS) [CVE-2022-38900](https://github.com/advisories/GHSA-w573-4hg7-7wgq)
-      - Security Update - 'minimatch' ReDoS vulnerability [CVE-2022-3517](https://github.com/advisories/GHSA-f8q6-p94x-37v3)
-      - Security Update - 'xml2js' is vulnerable to prototype pollution [CVE-2023-0842](https://github.com/advisories/GHSA-776f-qx25-q3cc)
+      - Security Update - Uncontrolled resource consumption in braces [CVE-2024-4068](https://github.com/advisories/GHSA-grv7-fg5c-xmjg)
+      - Security Update - Regular Expression Denial of Service (ReDoS) in micromatch [CVE-2024-4067](https://github.com/advisories/GHSA-952p-6rrq-rcjv)
     
 on:
   workflow_dispatch:
@@ -15,13 +14,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ ubuntu-20.04 ]
+        os: [ ubuntu-22.04 ]
         node-version: [ 16.x ]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
