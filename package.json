@@ -1,6 +1,6 @@
 {
   "name": "qtest-mstest-parser",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "qTest parser for MSTest (.trx) test results file",
   "main": "parser.js",
   "scripts": {
