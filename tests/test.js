@@ -1,8 +1,10 @@
 const assert = require('assert');
 const parser = require('../parser.js');
+const fs = require('fs');
+const xml2js = require('xml2js');
 
 (async () => {
-    console.log('TEST 1 - Parse MSTest (TestResults-DifferentTestOutcomes.trx) results file with different test outcomes (using path with filename).');
+    console.log('🧪🔹 [ TEST 1 - Parse MSTest (TestResults-DifferentTestOutcomes.trx) results file with different test outcomes (using path with filename). ] 🔹🧪');
     let result = await parser.parse('./tests/sample-mstest-results/TestResults-DifferentTestOutcomes.trx', null);
     let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
@@ -17,7 +19,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 2 - Parse MSTest (TestResults-AllPassedOutcomes.trx) results file with all passed test outcomes (using path with filename).');
+    console.log('🧪🔹 [ TEST 2 - Parse MSTest (TestResults-AllPassedOutcomes.trx) results file with all passed test outcomes (using path with filename). ] 🔹🧪');
     let result = await parser.parse('./tests/sample-mstest-results/TestResults-AllPassedOutcomes.trx', null);
     let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
@@ -33,7 +35,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 3 - Parse MSTest (TestResults-AllFailedOutcomes.trx) results file with all failed test outcomes (using path with filename).');
+    console.log('🧪🔹 [ TEST 3 - Parse MSTest (TestResults-AllFailedOutcomes.trx) results file with all failed test outcomes (using path with filename). ] 🔹🧪');
     let result = await parser.parse('./tests/sample-mstest-results/TestResults-AllFailedOutcomes.trx', null);
     let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
@@ -49,7 +51,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 4 - Parse MSTest (TestResults-WithAttachments.trx) results file with attachment details (using path with filename).');
+    console.log('🧪🔹 [ TEST 4 - Parse MSTest (TestResults-WithAttachments.trx) results file with attachment details (using path with filename). ] 🔹🧪');
     let result = await parser.parse('./tests/sample-mstest-results/TestResults-WithAttachments.trx', null);
     let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
@@ -63,7 +65,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 5 - Parse all MSTest (.trx) result files (using path to result files - path ending /).');
+    console.log('🧪🔹 [ TEST 5 - Parse all MSTest (.trx) result files (using path to result files - path ending /). ] 🔹🧪');
     let result = await parser.parse('./tests/sample-mstest-results/', null);
     let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
@@ -76,7 +78,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 6 - Parse all MSTest (.trx) result files (using path to result files - path not ending /).');
+    console.log('🧪🔹 [ TEST 6 - Parse all MSTest (.trx) result files (using path to result files - path not ending /). ] 🔹🧪');
     let result = await parser.parse('./tests/sample-mstest-results', null);
     let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
@@ -89,7 +91,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 7 - Parse all MSTest (.trx) result files (using matching pattern - *.trx /).');
+    console.log('🧪🔹 [ TEST 7 - Parse all MSTest (.trx) result files (using matching pattern - *.trx /). ] 🔹🧪');
     let result = await parser.parse('./tests/sample-mstest-results/*.trx', null);
     let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
@@ -102,7 +104,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 8 - Parse all MSTest (.trx) result files (using matching pattern - **/*.trx /).');
+    console.log('🧪🔹 [ TEST 8 - Parse all MSTest (.trx) result files (using matching pattern - **/*.trx /). ] 🔹🧪');
     let result = await parser.parse('./tests/sample-mstest-results/**/*.trx', null);
     let resultString = JSON.stringify(result, null, 4);
     //console.log(resultString);
@@ -115,7 +117,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 9 - Get test case outcome status mappings (MSTest -> qTest) test.');
+    console.log('🧪🔹 [ TEST 9 - Get test case outcome status mappings (MSTest -> qTest) test. ] 🔹🧪');
     //Different test outcome statuses comparison.
     let result = parser.getTestCaseStatus('Failed');
     assert.equal(result, 'FAIL');
@@ -138,7 +140,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 10 - HTML entities test.');
+    console.log('🧪🔹 [ TEST 10 - HTML entities test. ] 🔹🧪');
     //HTML entities conversion check
     let result = parser.htmlEntities('&');
     assert.equal(result, '&amp;');
@@ -151,7 +153,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 11 - Delay test.');
+    console.log('🧪🔹 [ TEST 11 - Delay test. ] 🔹🧪');
     let waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
     let timeNow = new Date().getTime();
     parser.delay(waitTime);
@@ -160,7 +162,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 12 - Max delay test.');
+    console.log('🧪🔹 [ TEST 12 - Max delay test.');
     let waitTime = 20001;
     let timeNow = new Date().getTime();
     parser.delay(waitTime);
@@ -169,7 +171,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 13 - Parse MSTest (TestResults-DifferentTestOutcomes.trx) results file with different test outcomes (using path with filename) & delay option.');
+    console.log('🧪🔹 [ TEST 13 - Parse MSTest (TestResults-DifferentTestOutcomes.trx) results file with different test outcomes (using path with filename) & delay option. ] 🔹🧪');
     let waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
     let result = await parser.parse('./tests/sample-mstest-results/TestResults-DifferentTestOutcomes.trx', { delay: waitTime });
     let resultString = JSON.stringify(result, null, 4);
@@ -185,7 +187,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 14 - Parse all MSTest (.trx) result files (using path to result files - path ending /) & delay option.');
+    console.log('🧪🔹 [ TEST 14 - Parse all MSTest (.trx) result files (using path to result files - path ending /) & delay option. ] 🔹🧪');
     let waitTime = Math.floor(Math.random() * (4000 - 1000) + 1000);
     let result = await parser.parse('./tests/sample-mstest-results/', { delay: waitTime });
     let resultString = JSON.stringify(result, null, 4);
@@ -199,7 +201,7 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 15 - Test result files not found.');
+    console.log('🧪🔹 [ TEST 15 - Test result files not found. ] 🔹🧪');
     try{
         await parser.parse('./tests/invalid-mstest-result-files/path-with-no-mstest-results/', null);
     } catch(e) {
@@ -209,7 +211,45 @@ const parser = require('../parser.js');
 })();
 
 (async () => {
-    console.log('TEST 16 - Invalid test results file.');
+    console.log('🧪🔹 [ TEST 16 - Invalid test results file. ] 🔹🧪');
     let results = await parser.parse('./tests/invalid-mstest-result-files/TestResults-Invalid.trx', null);
     assert.equal(results.length, 0);
+})();
+
+(async () => {
+    console.log("🧪🔹 [ TEST 17 - Should log an error when XML parsing fails. ] 🔹🧪");
+
+    // Spy on console.error
+    let consoleErrorSpy = [];
+    const originalConsoleError = console.error;
+    console.error = (msg, err) => {
+        consoleErrorSpy.push(msg);
+        originalConsoleError(msg, err);
+    };
+
+    // Backup original functions
+    const originalReadFileSync = fs.readFileSync;
+    const originalStatSync = fs.statSync;
+    const originalParseString = xml2js.parseString;
+
+    try {
+        // Mock
+        fs.statSync = () => ({ isFile: () => true });
+        fs.readFileSync = () => "<TestRun><Invalid></TestRun>";
+        xml2js.parseString = (data, options, callback) => {
+            callback(new Error("Invalid XML format"), null);
+        };
+
+        // Call the function
+        let result = await parser.parse("./tests/sample-mstest-results/TestResults-Invalid.trx", null);
+        assert(Array.isArray(result));
+        assert(result.length === 0);
+        assert(consoleErrorSpy.some(msg => msg.includes("Could not parse ./tests/sample-mstest-results/TestResults-Invalid.trx")), "Error log not found in console.error");
+    } finally {
+        // Restore original functions
+        fs.statSync = originalStatSync;
+        fs.readFileSync = originalReadFileSync;
+        xml2js.parseString = originalParseString;
+        console.error = originalConsoleError;
+    }
 })();
