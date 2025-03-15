@@ -162,7 +162,7 @@ const xml2js = require('xml2js');
 })();
 
 (async () => {
-    console.log('🧪🔹 [ TEST 12 - Max delay test.');
+    console.log('🧪🔹 [ TEST 12 - Max delay test. ] 🔹🧪');
     let waitTime = 20001;
     let timeNow = new Date().getTime();
     parser.delay(waitTime);
