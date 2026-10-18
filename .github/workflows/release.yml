@@ -1,10 +1,19 @@
 name: Release
 
 env:
-    RELEASE_NAME: "v.1.0.5"
+    RELEASE_NAME: "v.1.0.6"
     RELEASE_NOTES: |
-      - Security Update - Uncontrolled resource consumption in braces [CVE-2024-4068](https://github.com/advisories/GHSA-grv7-fg5c-xmjg)
-      - Security Update - Regular Expression Denial of Service (ReDoS) in micromatch [CVE-2024-4067](https://github.com/advisories/GHSA-952p-6rrq-rcjv)
+      - Security Updates
+        - [CVE-2026-102278](https://github.com/advisories/GHSA-qhr7-859c-m2p7)
+        - [CVE-2026-69152](https://github.com/advisories/GHSA-rgw5-rvv9-x895)
+        - [CVE-2026-14257](https://github.com/advisories/GHSA-mh99-v99m-4gvg)
+        - [CVE-2026-13149](https://github.com/advisories/GHSA-3jxr-9vmj-r5cp)
+        - [CVE-2026-33671](https://github.com/advisories/GHSA-c2c7-rcm5-vvqj)
+        - [CVE-2026-27904](https://github.com/advisories/GHSA-23c5-xmqv-rm74)
+        - [CVE-2026-27903](https://github.com/advisories/GHSA-7r86-cg39-jmmj)
+        - [CVE-2026-26996](https://github.com/advisories/GHSA-3ppc-4f35-3m26)
+        - [CVE-2026-102277](https://github.com/advisories/GHSA-q2hr-2g5m-vwhr)
+        - [CVE-2026-33672](https://github.com/advisories/GHSA-3v7f-55p6-f55p)
     
 on:
   workflow_dispatch:
@@ -18,9 +27,9 @@ jobs:
         node-version: [ 16.x ]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v5
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
